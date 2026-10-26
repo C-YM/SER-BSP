@@ -21,7 +21,7 @@
 ├── utils.py               # 参数初始化、混淆矩阵绘制等
 ├── params.yaml            # 微调相关配置
 ├── wav2vec.py             # 微调 wav2vec2 做 SER 分类（基线）
-├── huBERT.py              # 微调 WavLM 做 SER 分类（基线，文件名与实际模型不符）
+├── huBERT.py              # 
 └── models/
     ├── BSP.py                  # BSP 域适应模型（核心方法）
     ├── CNN_LSTM_ATT_SINGLE.py  # DANN / GRL 对抗基线
@@ -57,17 +57,4 @@ python train.py --model BSP --lr 0.0005 --epoch 30
 python wav2vec.py   # 或 python huBERT.py
 ```
 
-## 声学特征集说明
 
-`data_loader.py` 中保留了 `FEATURES_LENGTH` 与 `load_feature()`，支持以下特征集：
-
-- `deepspectrum`：DeepSpectrum，1920 维
-- `opensmile`：openSMILE 特征，6374 维（对应 ComParE 一类 openSMILE 特征集）
-- `audeep`：auDeep，4096 维
-- `xbow`：bag-of-audio-words，2000 维
-
-注意：当前训练主流程硬编码为 wav2vec 的 `.npz` 特征，上述特征集的读取入口存在，但尚未接入 `__getitem__` 的实际数据加载。
-
-## 引用
-
-TODO: 补充论文引用信息。
