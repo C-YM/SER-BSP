@@ -1,0 +1,26 @@
+#target: label
+#
+#wav2vec:
+#  freezeExtractor: true
+#  freezeTransformer: false
+#  pooling: mean
+#  group: all
+#  model: EdoAbati/whisper-medium-it
+##  model: facebook/hubert-large-ls960-ft
+##  model: microsoft/wavlm-large
+#  epochs: 15
+#
+#preprocessing:
+#  wav:
+target: label
+
+wav2vec:
+  freezeExtractor: true
+  freezeTransformer: false
+  pooling: mean
+  group: all
+  model: jonatasgrosman/wav2vec2-large-xlsr-53-english
+  epochs: 15
+
+preprocessing:
+  wav:

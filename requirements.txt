@@ -1,0 +1,11 @@
+torch
+torchaudio
+numpy
+pandas
+scikit-learn
+matplotlib
+seaborn
+pyyaml
+transformers
+datasets
+evaluate
